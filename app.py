@@ -1,9 +1,8 @@
 ''' this script solves the pirates and the bullions puzzle (08/Jan/2020)'''
-import time
 import streamlit as st
 import numpy as np
 import pandas as pd
-from time import sleep
+import time 
 
 
 # python functions to solve the puzzle
@@ -78,7 +77,7 @@ def solve_pirates(p,b,verbose=False):
 
 st.set_page_config(
             page_title="PIRATES PUZZLE", # => Quick reference - Streamlit
-            page_icon=":parrot:",
+            page_icon="🦜",
             layout="centered", # wide
             initial_sidebar_state="auto") # c
 
@@ -113,7 +112,7 @@ if st.button('Check answer'):
         split = solve_pirates(pirates, bullions)
     st.success('Calculation done! 👇') 
     st.bar_chart(pd.DataFrame(split))
-    sleep(2)
+    time.sleep(2)
     if guess == split[0]:
         st.balloons()
         st.success(f'You guessed it right! 😎 The oldest pirate will get {split[0]} bullions') 
