@@ -1,0 +1,1 @@
+web: sh setup.sh && streamlit run pirates_puzzle_streamlit.py
